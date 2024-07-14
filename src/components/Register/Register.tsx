@@ -1,5 +1,5 @@
 'use client'
-import {Simulate} from "react-dom/test-utils";
+
 import {useState} from "react";
 
 interface RegisterProps {
@@ -31,11 +31,11 @@ const Register = (props: RegisterProps) => {
         };
 
     return (
-        <form  onSubmit={handleSubmit}>
-            <div>
+        <form onSubmit={handleSubmit} className=" flex flex-col rounded-[20px] p-[30px_50px]">
+            <div className="mt-[20px]">
                 <label>
-                    Имя:
                     <input
+                        placeholder="Email"
                         type="text"
                         name="name"
                         value={formData.name}
@@ -46,20 +46,8 @@ const Register = (props: RegisterProps) => {
             </div>
             <div>
                 <label>
-                    <label></label>
                     <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </label>
-            </div>
-            <div>
-                <label>
-                    Пароль:
-                    <input
+                        placeholder="Password"
                         type="password"
                         name="password"
                         value={formData.password}
@@ -68,9 +56,9 @@ const Register = (props: RegisterProps) => {
                     />
                 </label>
             </div>
-            <div>
-                <button type="submit">Register</button>
-                <button type="button" onClick={handleReset}>Login In</button>
+            <div className="flex flex-col gap-[13px] mt-[103px]">
+                <button className="bg-black text-white rounded-[2px]" type="submit">Registration</button>
+                <button className="bg-black text-white rounded-[2px]" type="button" onClick={handleReset}>Login In</button>
             </div>
         </form>
     );
