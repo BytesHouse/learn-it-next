@@ -32,8 +32,9 @@ const Register = (props: RegisterProps) => {
 
     return (
         <form onSubmit={handleSubmit} className=" flex flex-col rounded-[20px] p-[30px_50px]">
-            <div className="mt-[20px]">
-                <label>
+            <div>
+                <h1 className=" mt-[30px] text-[28px] font-medium text-center">Log In</h1>
+                <label >
                     <input
                         placeholder="Email"
                         type="text"

@@ -12,8 +12,7 @@ const handleClickToggleState = () => {
         setState(!state)
 }
 
-    return <div className="border mx-auto flex flex-col md:flex-row max-w-[800px] h-[500px] rounded-[20px] font-famaly: Gilroy-Medium
-" >
+    return <div className="border mx-auto flex flex-col md:flex-row max-w-[800px] h-[500px] rounded-[20px] font-famaly: Gilroy-Medium" >
         <Image src="/assets/images/loginimage.png"
         width="400" height="400"/>
         {state ?  <Login changeFunc={handleClickToggleState}/> : <Register/> }
